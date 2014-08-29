@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83E586CF19B02F2F005F305C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586CE19B02F2F005F305C /* Cocoa.framework */; };
+		83E586D119B02F2F005F305C /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586D019B02F2F005F305C /* ScreenSaver.framework */; };
+		83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E586D919B02F2F005F305C /* InfoPlist.strings */; };
+		83E586DF19B02F2F005F305C /* MOONView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E586DE19B02F2F005F305C /* MOONView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83E586CB19B02F2F005F305C /* MOON.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOON.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		83E586CE19B02F2F005F305C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		83E586D019B02F2F005F305C /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		83E586D319B02F2F005F305C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		83E586D419B02F2F005F305C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		83E586D519B02F2F005F305C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83E586D819B02F2F005F305C /* MOON-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MOON-Info.plist"; sourceTree = "<group>"; };
+		83E586DA19B02F2F005F305C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83E586DC19B02F2F005F305C /* MOON-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOON-Prefix.pch"; sourceTree = "<group>"; };
+		83E586DD19B02F2F005F305C /* MOONView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOONView.h; sourceTree = "<group>"; };
+		83E586DE19B02F2F005F305C /* MOONView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOONView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83E586C619B02F2F005F305C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E586D119B02F2F005F305C /* ScreenSaver.framework in Frameworks */,
+				83E586CF19B02F2F005F305C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83E586C019B02F2F005F305C = {
+			isa = PBXGroup;
+			children = (
+				83E586D619B02F2F005F305C /* MOON */,
+				83E586CD19B02F2F005F305C /* Frameworks */,
+				83E586CC19B02F2F005F305C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83E586CC19B02F2F005F305C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83E586CB19B02F2F005F305C /* MOON.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83E586CD19B02F2F005F305C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83E586CE19B02F2F005F305C /* Cocoa.framework */,
+				83E586D019B02F2F005F305C /* ScreenSaver.framework */,
+				83E586D219B02F2F005F305C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83E586D219B02F2F005F305C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83E586D319B02F2F005F305C /* AppKit.framework */,
+				83E586D419B02F2F005F305C /* CoreData.framework */,
+				83E586D519B02F2F005F305C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		83E586D619B02F2F005F305C /* MOON */ = {
+			isa = PBXGroup;
+			children = (
+				83E586DD19B02F2F005F305C /* MOONView.h */,
+				83E586DE19B02F2F005F305C /* MOONView.m */,
+				83E586D719B02F2F005F305C /* Supporting Files */,
+			);
+			path = MOON;
+			sourceTree = "<group>";
+		};
+		83E586D719B02F2F005F305C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83E586D819B02F2F005F305C /* MOON-Info.plist */,
+				83E586D919B02F2F005F305C /* InfoPlist.strings */,
+				83E586DC19B02F2F005F305C /* MOON-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		83E586C719B02F2F005F305C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		83E586CA19B02F2F005F305C /* MOON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83E586E219B02F2F005F305C /* Build configuration list for PBXNativeTarget "MOON" */;
+			buildPhases = (
+				83E586C519B02F2F005F305C /* Sources */,
+				83E586C619B02F2F005F305C /* Frameworks */,
+				83E586C719B02F2F005F305C /* Headers */,
+				83E586C819B02F2F005F305C /* Resources */,
+				83E586C919B02F2F005F305C /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MOON;
+			productName = MOON;
+			productReference = 83E586CB19B02F2F005F305C /* MOON.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83E586C119B02F2F005F305C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Duck Brains";
+			};
+			buildConfigurationList = 83E586C419B02F2F005F305C /* Build configuration list for PBXProject "MOON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83E586C019B02F2F005F305C;
+			productRefGroup = 83E586CC19B02F2F005F305C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83E586CA19B02F2F005F305C /* MOON */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83E586C819B02F2F005F305C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		83E586C919B02F2F005F305C /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83E586C519B02F2F005F305C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E586DF19B02F2F005F305C /* MOONView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83E586D919B02F2F005F305C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83E586DA19B02F2F005F305C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83E586E019B02F2F005F305C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83E586E119B02F2F005F305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		83E586E319B02F2F005F305C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MOON/MOON-Prefix.pch";
+				INFOPLIST_FILE = "MOON/MOON-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		83E586E419B02F2F005F305C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MOON/MOON-Prefix.pch";
+				INFOPLIST_FILE = "MOON/MOON-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83E586C419B02F2F005F305C /* Build configuration list for PBXProject "MOON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83E586E019B02F2F005F305C /* Debug */,
+				83E586E119B02F2F005F305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83E586E219B02F2F005F305C /* Build configuration list for PBXNativeTarget "MOON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83E586E319B02F2F005F305C /* Debug */,
+				83E586E419B02F2F005F305C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83E586C119B02F2F005F305C /* Project object */;
+}
