@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83328A8B19CCB22000E0126E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83328A8A19CCB22000E0126E /* AVKit.framework */; };
 		83E586CF19B02F2F005F305C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586CE19B02F2F005F305C /* Cocoa.framework */; };
 		83E586D119B02F2F005F305C /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586D019B02F2F005F305C /* ScreenSaver.framework */; };
 		83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E586D919B02F2F005F305C /* InfoPlist.strings */; };
 		83E586DF19B02F2F005F305C /* MOONView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E586DE19B02F2F005F305C /* MOONView.m */; };
+		83E586E619B0346C005F305C /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 83E586E519B0346C005F305C /* moon.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83328A8A19CCB22000E0126E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		83E586CB19B02F2F005F305C /* MOON.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOON.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E586CE19B02F2F005F305C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		83E586D019B02F2F005F305C /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -25,6 +28,7 @@
 		83E586DC19B02F2F005F305C /* MOON-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MOON-Prefix.pch"; sourceTree = "<group>"; };
 		83E586DD19B02F2F005F305C /* MOONView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MOONView.h; sourceTree = "<group>"; };
 		83E586DE19B02F2F005F305C /* MOONView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MOONView.m; sourceTree = "<group>"; };
+		83E586E519B0346C005F305C /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83328A8B19CCB22000E0126E /* AVKit.framework in Frameworks */,
 				83E586D119B02F2F005F305C /* ScreenSaver.framework in Frameworks */,
 				83E586CF19B02F2F005F305C /* Cocoa.framework in Frameworks */,
 			);
@@ -60,6 +65,7 @@
 		83E586CD19B02F2F005F305C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				83328A8A19CCB22000E0126E /* AVKit.framework */,
 				83E586CE19B02F2F005F305C /* Cocoa.framework */,
 				83E586D019B02F2F005F305C /* ScreenSaver.framework */,
 				83E586D219B02F2F005F305C /* Other Frameworks */,
@@ -80,6 +86,7 @@
 		83E586D619B02F2F005F305C /* MOON */ = {
 			isa = PBXGroup;
 			children = (
+				83E586E519B0346C005F305C /* moon.mp4 */,
 				83E586DD19B02F2F005F305C /* MOONView.h */,
 				83E586DE19B02F2F005F305C /* MOONView.m */,
 				83E586D719B02F2F005F305C /* Supporting Files */,
@@ -160,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83E586E619B0346C005F305C /* moon.mp4 in Resources */,
 				83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +322,7 @@
 				83E586E419B02F2F005F305C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

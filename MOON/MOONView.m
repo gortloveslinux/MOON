@@ -1,5 +1,5 @@
 //
-//  MOONView.m
+//  MOONView.m/Users/chris/Desktop/MOONView.m
 //  MOON
 //
 //  Created by Chris Edwards on 8/28/14.
@@ -10,11 +10,35 @@
 
 @implementation MOONView
 
+static const NSString *ItemStatusContext;
+
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {
-        [self setAnimationTimeInterval:1/30.0];
+        [self setAutoresizingMask:NSViewWidthSizable|NSViewHeightSizable];
+        [self setAutoresizesSubviews:YES];
+        
+        NSURL* url = [[NSBundle bundleForClass:[self class]] URLForResource:@"moon" withExtension:@"mp4"];
+        AVURLAsset* avurlAsset = [[AVURLAsset alloc] initWithURL:url options:nil];
+        AVPlayerItem* playerItem = [[AVPlayerItem alloc] initWithAsset:avurlAsset];
+        self.player = [AVPlayer playerWithPlayerItem:playerItem];
+        
+        [self.player setActionAtItemEnd:AVPlayerActionAtItemEndNone];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(playerItemDidReachEnd:)
+                                                     name:AVPlayerItemDidPlayToEndTimeNotification
+                                                   object:[self.player currentItem]];
+        
+        self.playerView = [[AVPlayerView alloc] initWithFrame:[self bounds]];
+        [self.playerView setControlsStyle:AVPlayerViewControlsStyleNone];
+        [self.playerView setPlayer:self.player];
+        [self addSubview:self.playerView];
+        [self.player play];
+        
+
+
     }
     return self;
 }
@@ -26,17 +50,7 @@
 
 - (void)stopAnimation
 {
-    [super stopAnimation];
-}
-
-- (void)drawRect:(NSRect)rect
-{
-    [super drawRect:rect];
-}
-
-- (void)animateOneFrame
-{
-    return;
+    //[super stopAnimation];
 }
 
 - (BOOL)hasConfigureSheet
@@ -47,6 +61,10 @@
 - (NSWindow*)configureSheet
 {
     return nil;
+}
+- (void)playerItemDidReachEnd:(NSNotification *)notification {
+    AVPlayerItem *p = [notification object];
+    [p seekToTime:kCMTimeZero];
 }
 
 @end
