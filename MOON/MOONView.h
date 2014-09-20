@@ -12,7 +12,6 @@
 
 @interface MOONView : ScreenSaverView
 
-@property (nonatomic, strong) AVPlayer* player;
 @property (nonatomic, strong) AVPlayerView* playerView;
 
 @end

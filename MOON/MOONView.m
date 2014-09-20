@@ -9,9 +9,7 @@
 #import "MOONView.h"
 
 @implementation MOONView
-
-static const NSString *ItemStatusContext;
-
+#define vSize 540
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
     self = [super initWithFrame:frame isPreview:isPreview];
@@ -20,25 +18,23 @@ static const NSString *ItemStatusContext;
         [self setAutoresizesSubviews:YES];
         
         NSURL* url = [[NSBundle bundleForClass:[self class]] URLForResource:@"moon" withExtension:@"mp4"];
-        AVURLAsset* avurlAsset = [[AVURLAsset alloc] initWithURL:url options:nil];
-        AVPlayerItem* playerItem = [[AVPlayerItem alloc] initWithAsset:avurlAsset];
-        self.player = [AVPlayer playerWithPlayerItem:playerItem];
-        
-        [self.player setActionAtItemEnd:AVPlayerActionAtItemEndNone];
+        AVPlayerItem* playerItem = [[AVPlayerItem alloc] initWithURL:url];
+        AVPlayer* player = [AVPlayer playerWithPlayerItem:playerItem];
+        [player setActionAtItemEnd:AVPlayerActionAtItemEndNone];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(playerItemDidReachEnd:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
-                                                   object:[self.player currentItem]];
+                                                   object:[player currentItem]];
         
-        self.playerView = [[AVPlayerView alloc] initWithFrame:[self bounds]];
+        self.playerView = [[AVPlayerView alloc] initWithFrame:CGRectMake(
+                                                                         self.bounds.size.width/2 - vSize/2,
+                                                                         self.bounds.size.height/2 - vSize/2,
+                                                                         vSize, vSize)];
+        
         [self.playerView setControlsStyle:AVPlayerViewControlsStyleNone];
-        [self.playerView setPlayer:self.player];
+        [self.playerView setPlayer:player];
         [self addSubview:self.playerView];
-        [self.player play];
-        
-
-
     }
     return self;
 }
@@ -46,11 +42,13 @@ static const NSString *ItemStatusContext;
 - (void)startAnimation
 {
     [super startAnimation];
+    [[self.playerView player] play];
 }
 
 - (void)stopAnimation
 {
-    //[super stopAnimation];
+    [super stopAnimation];
+    [[self.playerView player] pause];
 }
 
 - (BOOL)hasConfigureSheet
@@ -62,6 +60,7 @@ static const NSString *ItemStatusContext;
 {
     return nil;
 }
+
 - (void)playerItemDidReachEnd:(NSNotification *)notification {
     AVPlayerItem *p = [notification object];
     [p seekToTime:kCMTimeZero];
