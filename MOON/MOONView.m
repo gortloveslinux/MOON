@@ -27,10 +27,16 @@
                                                      name:AVPlayerItemDidPlayToEndTimeNotification
                                                    object:[player currentItem]];
         
+        CGFloat width = frame.size.width/3;
+        CGFloat height = frame.size.height/3;
+        CGFloat xOrigin = frame.size.width/2 - width/2;
+        CGFloat yOrigin = frame.size.height/2 - height/2;
+        
         self.playerView = [[AVPlayerView alloc] initWithFrame:CGRectMake(
-                                                                         self.bounds.size.width/2 - vSize/2,
-                                                                         self.bounds.size.height/2 - vSize/2,
-                                                                         vSize, vSize)];
+                                                                         xOrigin,
+                                                                         yOrigin,
+                                                                         width,
+                                                                         height)];
         
         [self.playerView setControlsStyle:AVPlayerViewControlsStyleNone];
         [self.playerView setPlayer:player];

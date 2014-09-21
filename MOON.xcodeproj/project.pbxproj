@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		83328A8B19CCB22000E0126E /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83328A8A19CCB22000E0126E /* AVKit.framework */; };
+		83A05D2C19CF7B1900D2A339 /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A05D2A19CF7B1900D2A339 /* thumbnail.png */; };
+		83A05D2D19CF7B1900D2A339 /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A05D2B19CF7B1900D2A339 /* thumbnail@2x.png */; };
 		83E586CF19B02F2F005F305C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586CE19B02F2F005F305C /* Cocoa.framework */; };
 		83E586D119B02F2F005F305C /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E586D019B02F2F005F305C /* ScreenSaver.framework */; };
 		83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83E586D919B02F2F005F305C /* InfoPlist.strings */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		83328A8A19CCB22000E0126E /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		83A05D2A19CF7B1900D2A339 /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		83A05D2B19CF7B1900D2A339 /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 		83E586CB19B02F2F005F305C /* MOON.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MOON.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		83E586CE19B02F2F005F305C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		83E586D019B02F2F005F305C /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -86,7 +90,6 @@
 		83E586D619B02F2F005F305C /* MOON */ = {
 			isa = PBXGroup;
 			children = (
-				83E586E519B0346C005F305C /* moon.mp4 */,
 				83E586DD19B02F2F005F305C /* MOONView.h */,
 				83E586DE19B02F2F005F305C /* MOONView.m */,
 				83E586D719B02F2F005F305C /* Supporting Files */,
@@ -97,6 +100,9 @@
 		83E586D719B02F2F005F305C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				83A05D2A19CF7B1900D2A339 /* thumbnail.png */,
+				83A05D2B19CF7B1900D2A339 /* thumbnail@2x.png */,
+				83E586E519B0346C005F305C /* moon.mp4 */,
 				83E586D819B02F2F005F305C /* MOON-Info.plist */,
 				83E586D919B02F2F005F305C /* InfoPlist.strings */,
 				83E586DC19B02F2F005F305C /* MOON-Prefix.pch */,
@@ -168,7 +174,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E586E619B0346C005F305C /* moon.mp4 in Resources */,
+				83A05D2D19CF7B1900D2A339 /* thumbnail@2x.png in Resources */,
 				83E586DB19B02F2F005F305C /* InfoPlist.strings in Resources */,
+				83A05D2C19CF7B1900D2A339 /* thumbnail.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

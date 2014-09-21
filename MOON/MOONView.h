@@ -11,7 +11,5 @@
 #import <AVKit/AVPlayerView.h>
 
 @interface MOONView : ScreenSaverView
-
-@property (nonatomic, strong) AVPlayerView* playerView;
-
+@property AVPlayerView* playerView;
 @end
